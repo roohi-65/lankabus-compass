@@ -1,0 +1,610 @@
+[
+ {
+  "id": "S001",
+  "name": "Colombo Fort / Pettah",
+  "district": "Colombo",
+  "province": "Western",
+  "lat": 6.9366,
+  "lng": 79.8528
+ },
+ {
+  "id": "S002",
+  "name": "Maradana",
+  "district": "Colombo",
+  "province": "Western",
+  "lat": 6.9271,
+  "lng": 79.8651
+ },
+ {
+  "id": "S003",
+  "name": "Borella",
+  "district": "Colombo",
+  "province": "Western",
+  "lat": 6.9147,
+  "lng": 79.8777
+ },
+ {
+  "id": "S004",
+  "name": "Dehiwala",
+  "district": "Colombo",
+  "province": "Western",
+  "lat": 6.8511,
+  "lng": 79.8653
+ },
+ {
+  "id": "S005",
+  "name": "Mount Lavinia",
+  "district": "Colombo",
+  "province": "Western",
+  "lat": 6.8389,
+  "lng": 79.8636
+ },
+ {
+  "id": "S006",
+  "name": "Nugegoda",
+  "district": "Colombo",
+  "province": "Western",
+  "lat": 6.8649,
+  "lng": 79.8997
+ },
+ {
+  "id": "S007",
+  "name": "Maharagama",
+  "district": "Colombo",
+  "province": "Western",
+  "lat": 6.848,
+  "lng": 79.9265
+ },
+ {
+  "id": "S008",
+  "name": "Kottawa",
+  "district": "Colombo",
+  "province": "Western",
+  "lat": 6.8413,
+  "lng": 79.9648
+ },
+ {
+  "id": "S009",
+  "name": "Homagama",
+  "district": "Colombo",
+  "province": "Western",
+  "lat": 6.8441,
+  "lng": 80.0021
+ },
+ {
+  "id": "S010",
+  "name": "Kaduwela",
+  "district": "Colombo",
+  "province": "Western",
+  "lat": 6.9333,
+  "lng": 79.9833
+ },
+ {
+  "id": "S011",
+  "name": "Avissawella",
+  "district": "Colombo",
+  "province": "Western",
+  "lat": 6.9525,
+  "lng": 80.2105
+ },
+ {
+  "id": "S012",
+  "name": "Moratuwa",
+  "district": "Colombo",
+  "province": "Western",
+  "lat": 6.773,
+  "lng": 79.8816
+ },
+ {
+  "id": "S013",
+  "name": "Piliyandala",
+  "district": "Colombo",
+  "province": "Western",
+  "lat": 6.8018,
+  "lng": 79.9227
+ },
+ {
+  "id": "S014",
+  "name": "Kiribathgoda",
+  "district": "Gampaha",
+  "province": "Western",
+  "lat": 6.978,
+  "lng": 79.9296
+ },
+ {
+  "id": "S015",
+  "name": "Kadawatha",
+  "district": "Gampaha",
+  "province": "Western",
+  "lat": 7.001,
+  "lng": 79.9506
+ },
+ {
+  "id": "S016",
+  "name": "Wattala",
+  "district": "Gampaha",
+  "province": "Western",
+  "lat": 6.989,
+  "lng": 79.892
+ },
+ {
+  "id": "S017",
+  "name": "Ja-Ela",
+  "district": "Gampaha",
+  "province": "Western",
+  "lat": 7.0744,
+  "lng": 79.8919
+ },
+ {
+  "id": "S018",
+  "name": "Gampaha",
+  "district": "Gampaha",
+  "province": "Western",
+  "lat": 7.0873,
+  "lng": 80.0144
+ },
+ {
+  "id": "S019",
+  "name": "Veyangoda",
+  "district": "Gampaha",
+  "province": "Western",
+  "lat": 7.15,
+  "lng": 80.0667
+ },
+ {
+  "id": "S020",
+  "name": "Katunayake Airport",
+  "district": "Gampaha",
+  "province": "Western",
+  "lat": 7.1697,
+  "lng": 79.8841
+ },
+ {
+  "id": "S021",
+  "name": "Negombo",
+  "district": "Gampaha",
+  "province": "Western",
+  "lat": 7.2084,
+  "lng": 79.8358
+ },
+ {
+  "id": "S022",
+  "name": "Panadura",
+  "district": "Kalutara",
+  "province": "Western",
+  "lat": 6.7133,
+  "lng": 79.9047
+ },
+ {
+  "id": "S023",
+  "name": "Horana",
+  "district": "Kalutara",
+  "province": "Western",
+  "lat": 6.7159,
+  "lng": 80.0626
+ },
+ {
+  "id": "S024",
+  "name": "Kalutara",
+  "district": "Kalutara",
+  "province": "Western",
+  "lat": 6.5854,
+  "lng": 79.9607
+ },
+ {
+  "id": "S025",
+  "name": "Aluthgama",
+  "district": "Kalutara",
+  "province": "Western",
+  "lat": 6.4339,
+  "lng": 79.9987
+ },
+ {
+  "id": "S026",
+  "name": "Kandy",
+  "district": "Kandy",
+  "province": "Central",
+  "lat": 7.2906,
+  "lng": 80.6337
+ },
+ {
+  "id": "S027",
+  "name": "Peradeniya",
+  "district": "Kandy",
+  "province": "Central",
+  "lat": 7.257,
+  "lng": 80.597
+ },
+ {
+  "id": "S028",
+  "name": "Kadugannawa",
+  "district": "Kandy",
+  "province": "Central",
+  "lat": 7.2539,
+  "lng": 80.5239
+ },
+ {
+  "id": "S029",
+  "name": "Gampola",
+  "district": "Kandy",
+  "province": "Central",
+  "lat": 7.164,
+  "lng": 80.57
+ },
+ {
+  "id": "S030",
+  "name": "Matale",
+  "district": "Matale",
+  "province": "Central",
+  "lat": 7.4675,
+  "lng": 80.6234
+ },
+ {
+  "id": "S031",
+  "name": "Dambulla",
+  "district": "Matale",
+  "province": "Central",
+  "lat": 7.8567,
+  "lng": 80.6518
+ },
+ {
+  "id": "S032",
+  "name": "Nuwara Eliya",
+  "district": "Nuwara Eliya",
+  "province": "Central",
+  "lat": 6.9497,
+  "lng": 80.7891
+ },
+ {
+  "id": "S033",
+  "name": "Hatton",
+  "district": "Nuwara Eliya",
+  "province": "Central",
+  "lat": 6.8916,
+  "lng": 80.5955
+ },
+ {
+  "id": "S034",
+  "name": "Kegalle",
+  "district": "Kegalle",
+  "province": "Sabaragamuwa",
+  "lat": 7.2513,
+  "lng": 80.3464
+ },
+ {
+  "id": "S035",
+  "name": "Mawanella",
+  "district": "Kegalle",
+  "province": "Sabaragamuwa",
+  "lat": 7.25,
+  "lng": 80.445
+ },
+ {
+  "id": "S036",
+  "name": "Ratnapura",
+  "district": "Ratnapura",
+  "province": "Sabaragamuwa",
+  "lat": 6.6828,
+  "lng": 80.3992
+ },
+ {
+  "id": "S037",
+  "name": "Pelmadulla",
+  "district": "Ratnapura",
+  "province": "Sabaragamuwa",
+  "lat": 6.6167,
+  "lng": 80.5333
+ },
+ {
+  "id": "S038",
+  "name": "Balangoda",
+  "district": "Ratnapura",
+  "province": "Sabaragamuwa",
+  "lat": 6.65,
+  "lng": 80.7
+ },
+ {
+  "id": "S039",
+  "name": "Embilipitiya",
+  "district": "Ratnapura",
+  "province": "Sabaragamuwa",
+  "lat": 6.3333,
+  "lng": 80.85
+ },
+ {
+  "id": "S040",
+  "name": "Hikkaduwa",
+  "district": "Galle",
+  "province": "Southern",
+  "lat": 6.1395,
+  "lng": 80.1018
+ },
+ {
+  "id": "S041",
+  "name": "Ambalangoda",
+  "district": "Galle",
+  "province": "Southern",
+  "lat": 6.2353,
+  "lng": 80.0538
+ },
+ {
+  "id": "S042",
+  "name": "Galle",
+  "district": "Galle",
+  "province": "Southern",
+  "lat": 6.0329,
+  "lng": 80.2168
+ },
+ {
+  "id": "S043",
+  "name": "Weligama",
+  "district": "Matara",
+  "province": "Southern",
+  "lat": 5.974,
+  "lng": 80.4297
+ },
+ {
+  "id": "S044",
+  "name": "Matara",
+  "district": "Matara",
+  "province": "Southern",
+  "lat": 5.9485,
+  "lng": 80.5353
+ },
+ {
+  "id": "S045",
+  "name": "Akuressa",
+  "district": "Matara",
+  "province": "Southern",
+  "lat": 6.097,
+  "lng": 80.469
+ },
+ {
+  "id": "S046",
+  "name": "Deniyaya",
+  "district": "Matara",
+  "province": "Southern",
+  "lat": 6.343,
+  "lng": 80.558
+ },
+ {
+  "id": "S047",
+  "name": "Tangalle",
+  "district": "Hambantota",
+  "province": "Southern",
+  "lat": 6.024,
+  "lng": 80.797
+ },
+ {
+  "id": "S048",
+  "name": "Hambantota",
+  "district": "Hambantota",
+  "province": "Southern",
+  "lat": 6.1241,
+  "lng": 81.1185
+ },
+ {
+  "id": "S049",
+  "name": "Tissamaharama",
+  "district": "Hambantota",
+  "province": "Southern",
+  "lat": 6.283,
+  "lng": 81.286
+ },
+ {
+  "id": "S050",
+  "name": "Kataragama",
+  "district": "Monaragala",
+  "province": "Uva",
+  "lat": 6.4137,
+  "lng": 81.335
+ },
+ {
+  "id": "S051",
+  "name": "Badulla",
+  "district": "Badulla",
+  "province": "Uva",
+  "lat": 6.9934,
+  "lng": 81.055
+ },
+ {
+  "id": "S052",
+  "name": "Welimada",
+  "district": "Badulla",
+  "province": "Uva",
+  "lat": 6.9,
+  "lng": 80.9167
+ },
+ {
+  "id": "S053",
+  "name": "Bandarawela",
+  "district": "Badulla",
+  "province": "Uva",
+  "lat": 6.83,
+  "lng": 80.99
+ },
+ {
+  "id": "S054",
+  "name": "Haputale",
+  "district": "Badulla",
+  "province": "Uva",
+  "lat": 6.7667,
+  "lng": 80.95
+ },
+ {
+  "id": "S055",
+  "name": "Ella",
+  "district": "Badulla",
+  "province": "Uva",
+  "lat": 6.8667,
+  "lng": 81.0467
+ },
+ {
+  "id": "S056",
+  "name": "Mahiyanganaya",
+  "district": "Badulla",
+  "province": "Uva",
+  "lat": 7.3333,
+  "lng": 81.0
+ },
+ {
+  "id": "S057",
+  "name": "Wellawaya",
+  "district": "Monaragala",
+  "province": "Uva",
+  "lat": 6.7333,
+  "lng": 81.1
+ },
+ {
+  "id": "S058",
+  "name": "Monaragala",
+  "district": "Monaragala",
+  "province": "Uva",
+  "lat": 6.87,
+  "lng": 81.35
+ },
+ {
+  "id": "S059",
+  "name": "Kurunegala",
+  "district": "Kurunegala",
+  "province": "North Western",
+  "lat": 7.4863,
+  "lng": 80.3623
+ },
+ {
+  "id": "S060",
+  "name": "Kuliyapitiya",
+  "district": "Kurunegala",
+  "province": "North Western",
+  "lat": 7.47,
+  "lng": 80.04
+ },
+ {
+  "id": "S061",
+  "name": "Chilaw",
+  "district": "Puttalam",
+  "province": "North Western",
+  "lat": 7.5758,
+  "lng": 79.7953
+ },
+ {
+  "id": "S062",
+  "name": "Puttalam",
+  "district": "Puttalam",
+  "province": "North Western",
+  "lat": 8.0408,
+  "lng": 79.8394
+ },
+ {
+  "id": "S063",
+  "name": "Anuradhapura",
+  "district": "Anuradhapura",
+  "province": "North Central",
+  "lat": 8.3114,
+  "lng": 80.4037
+ },
+ {
+  "id": "S064",
+  "name": "Habarana",
+  "district": "Anuradhapura",
+  "province": "North Central",
+  "lat": 8.0333,
+  "lng": 80.75
+ },
+ {
+  "id": "S065",
+  "name": "Polonnaruwa",
+  "district": "Polonnaruwa",
+  "province": "North Central",
+  "lat": 7.9403,
+  "lng": 81.0188
+ },
+ {
+  "id": "S066",
+  "name": "Vavuniya",
+  "district": "Vavuniya",
+  "province": "Northern",
+  "lat": 8.7514,
+  "lng": 80.4971
+ },
+ {
+  "id": "S067",
+  "name": "Kilinochchi",
+  "district": "Kilinochchi",
+  "province": "Northern",
+  "lat": 9.3803,
+  "lng": 80.377
+ },
+ {
+  "id": "S068",
+  "name": "Jaffna",
+  "district": "Jaffna",
+  "province": "Northern",
+  "lat": 9.6615,
+  "lng": 80.0255
+ },
+ {
+  "id": "S069",
+  "name": "Point Pedro",
+  "district": "Jaffna",
+  "province": "Northern",
+  "lat": 9.8167,
+  "lng": 80.2333
+ },
+ {
+  "id": "S070",
+  "name": "Mannar",
+  "district": "Mannar",
+  "province": "Northern",
+  "lat": 8.981,
+  "lng": 79.9044
+ },
+ {
+  "id": "S071",
+  "name": "Mullaitivu",
+  "district": "Mullaitivu",
+  "province": "Northern",
+  "lat": 9.2671,
+  "lng": 80.8142
+ },
+ {
+  "id": "S072",
+  "name": "Trincomalee",
+  "district": "Trincomalee",
+  "province": "Eastern",
+  "lat": 8.5874,
+  "lng": 81.2152
+ },
+ {
+  "id": "S073",
+  "name": "Batticaloa",
+  "district": "Batticaloa",
+  "province": "Eastern",
+  "lat": 7.731,
+  "lng": 81.6747
+ },
+ {
+  "id": "S074",
+  "name": "Kalmunai",
+  "district": "Ampara",
+  "province": "Eastern",
+  "lat": 7.4167,
+  "lng": 81.8167
+ },
+ {
+  "id": "S075",
+  "name": "Ampara",
+  "district": "Ampara",
+  "province": "Eastern",
+  "lat": 7.2912,
+  "lng": 81.6724
+ },
+ {
+  "id": "S076",
+  "name": "Pottuvil",
+  "district": "Ampara",
+  "province": "Eastern",
+  "lat": 6.87,
+  "lng": 81.83
+ }
+]
