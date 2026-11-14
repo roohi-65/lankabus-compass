@@ -78,6 +78,15 @@ export default function TripFinderScreen({ navigation }) {
         </Pressable>
       </View>
 
+      {(from || to) && (
+  <Pressable
+    onPress={() => setTrip({ fromId: null, toId: null })}
+    style={{ alignSelf: 'flex-end', padding: 12 }}
+  >
+    <Text style={{ color: colors.maroon, fontWeight: '700' }}>Clear trip</Text>
+  </Pressable>
+)}
+
       {!from || !to ? (
         <EmptyState icon="compass-outline" title="Where are you going?" body="Pick a starting stop and a destination to see which buses connect them." />
       ) : same ? (
