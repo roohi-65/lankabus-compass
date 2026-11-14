@@ -2179,5 +2179,26 @@
   "durationMin": 140,
   "stops": ["S001", "S077", "S015", "S019", "S078", "S079"],
   "departures": ["05:00", "06:00", "07:00", "08:00", "09:00", "10:00", "12:00", "14:00", "16:00", "18:00"]
-}
+},
+{ "id": "R038", "number": "EN1", "name": "Akkaraipattu - Jaffna", "type": "Semi-Luxury", "operator": "SLTB / Private", "distanceKm": 500, "fare": 2100, "durationMin": 790,
+  "stops": ["S080","S074","S081","S073","S082","S065","S064","S063","S084","S066","S085","S067","S086","S087","S088","S068"],
+  "departures": ["06:00","18:30","20:00"] },
+{ "id": "R039", "number": "EN2", "name": "Batticaloa - Jaffna", "type": "Semi-Luxury", "operator": "SLTB / Private", "distanceKm": 420, "fare": 1760, "durationMin": 665,
+  "stops": ["S073","S082","S065","S064","S063","S084","S066","S067","S087","S068"],
+  "departures": ["05:00","17:30","19:30"] },
+{ "id": "R040", "number": "EN3", "name": "Trincomalee - Jaffna", "type": "Semi-Luxury", "operator": "SLTB / Private", "distanceKm": 350, "fare": 1470, "durationMin": 555,
+  "stops": ["S072","S083","S064","S063","S084","S066","S067","S068"],
+  "departures": ["05:30","19:00"] },
+{ "id": "R041", "number": "EN4", "name": "Batticaloa - Trincomalee", "type": "Normal", "operator": "SLTB / Private", "distanceKm": 120, "fare": 360, "durationMin": 240,
+  "stops": ["S073","S082","S083","S072"],
+  "departures": ["05:30","07:00","09:00","11:00","13:00","15:00"] },
+{ "id": "R042", "number": "EN5", "name": "Akkaraipattu - Ampara", "type": "Normal", "operator": "SLTB / Private", "distanceKm": 20, "fare": 60, "durationMin": 40,
+  "stops": ["S080","S075"],
+  "departures": ["05:30","06:30","07:30","08:30","10:00","12:00","14:00","16:00","18:00"] },
+{ "id": "R043", "number": "EN6", "name": "Pottuvil - Batticaloa", "type": "Normal", "operator": "SLTB / Private", "distanceKm": 150, "fare": 450, "durationMin": 300,
+  "stops": ["S076","S080","S074","S081","S073"],
+  "departures": ["05:00","07:00","09:00","12:00","15:00"] },
+{ "id": "R044", "number": "EN6A", "name": "Mannar - Vavuniya", "type": "Normal", "operator": "SLTB", "distanceKm": 115, "fare": 340, "durationMin": 230,
+  "stops": ["S070","S066"],
+  "departures": ["05:30","08:00","11:00","14:00"] }
 ]
