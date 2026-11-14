@@ -606,5 +606,26 @@
   "province": "Eastern",
   "lat": 6.87,
   "lng": 81.83
- }
+ },
+ { "id": "S077",
+  "name": "Ragama",
+   "district": "Gampaha", 
+   "province": "Western", 
+   "lat": 7.0278, 
+   "lng": 79.9221 
+},
+{ "id": "S078",
+ "name": "Nittambuwa", 
+ "district": "Gampaha", 
+ "province": "Western", 
+ "lat": 7.1425, 
+ "lng": 80.0958 
+},
+{ "id": "S079", 
+"name": "Warakapola", 
+"district": "Kegalle", 
+"province": "Sabaragamuwa",
+ "lat": 7.2250,
+  "lng": 80.1980 
+}
 ]
