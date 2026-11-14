@@ -627,5 +627,14 @@
 "province": "Sabaragamuwa",
  "lat": 7.2250,
   "lng": 80.1980 
-}
+},
+{ "id": "S080", "name": "Akkaraipattu", "district": "Ampara", "province": "Eastern", "lat": 7.2167, "lng": 81.85 },
+{ "id": "S081", "name": "Kattankudy", "district": "Batticaloa", "province": "Eastern", "lat": 7.6833, "lng": 81.7333 },
+{ "id": "S082", "name": "Valaichchenai", "district": "Batticaloa", "province": "Eastern", "lat": 7.9167, "lng": 81.5333 },
+{ "id": "S083", "name": "Kantale", "district": "Trincomalee", "province": "Eastern", "lat": 8.3667, "lng": 80.9833 },
+{ "id": "S084", "name": "Medawachchiya", "district": "Anuradhapura", "province": "North Central", "lat": 8.5333, "lng": 80.4833 },
+{ "id": "S085", "name": "Mankulam", "district": "Mullaitivu", "province": "Northern", "lat": 9.15, "lng": 80.45 },
+{ "id": "S086", "name": "Paranthan", "district": "Kilinochchi", "province": "Northern", "lat": 9.4167, "lng": 80.4 },
+{ "id": "S087", "name": "Elephant Pass", "district": "Jaffna", "province": "Northern", "lat": 9.5833, "lng": 80.4167 },
+{ "id": "S088", "name": "Chavakachcheri", "district": "Jaffna", "province": "Northern", "lat": 9.66, "lng": 80.16 }
 ]
