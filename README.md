@@ -2,7 +2,7 @@
 
 An offline bus route and stop guide for Sri Lanka, built with React Native (Expo) for ICA 03.
 
-LankaBus Compass covers 79 stops across all 25 districts and 37 major routes, all stored on the
+LankaBus Compass covers 88 stops across all 25 districts and 44 major routes, all stored on the
 device. Search by route number or town, filter by bus type, fare or province, view timetables and
 stop details, find direct or connecting buses between any two stops, and save favourites with
 personal notes. It works without an internet connection and uses no public APIs or online databases.
