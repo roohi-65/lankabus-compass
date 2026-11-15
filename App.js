@@ -63,14 +63,13 @@ function Root() {
 
   // keep the splash visible for at least 1.5 seconds
   useEffect(() => {
-    const t = setTimeout(() => setMinDone(true), 1500);
-    return () => clearTimeout(t);
-  }, []);
+  const t = setTimeout(() => setMinDone(true), 2500);
+  return () => clearTimeout(t);
+}, []);
 
-  if (!ready || !minDone) {
-    return <SplashView />;
-    const t = setTimeout(() => setMinDone(true), 2500);
-  }
+if (!ready || !minDone) {
+  return <SplashView />;
+}
 
   return (
     <NavigationContainer>
