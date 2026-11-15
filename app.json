@@ -18,8 +18,21 @@
       "package": "com.lankabus.compass"
     },
     "plugins": [
-      "expo-status-bar",
-      "expo-font"
-    ]
+  "expo-status-bar",
+  "expo-font",
+  [
+    "expo-splash-screen",
+    {
+      "backgroundColor": "#10243A",
+      "image": "./assets/splash.png",
+      "imageWidth": 200
+    }
+  ]
+],
+    "extra": {
+      "eas": {
+        "projectId": "e4b37cb1-c742-4893-92df-e36795a866f1"
+      }
+    }
   }
 }
