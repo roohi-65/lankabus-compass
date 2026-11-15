@@ -21,7 +21,6 @@ import { colors } from './src/theme';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
-
 const headerOptions = {
   headerStyle: { backgroundColor: colors.ink },
   headerTintColor: '#fff',
@@ -70,6 +69,7 @@ function Root() {
 
   if (!ready || !minDone) {
     return <SplashView />;
+    const t = setTimeout(() => setMinDone(true), 2500);
   }
 
   return (
