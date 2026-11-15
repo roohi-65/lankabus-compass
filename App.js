@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -8,7 +7,9 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 
 import SplashView from './src/components/SplashView';
+import { AuthProvider, useAuth } from './src/context/AuthContext';
 import { AppProvider, useApp } from './src/context/AppContext';
+import LoginScreen from './src/screens/LoginScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import RoutesScreen from './src/screens/RoutesScreen';
 import RouteDetailsScreen from './src/screens/RouteDetailsScreen';
@@ -21,6 +22,7 @@ import { colors } from './src/theme';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
+
 const headerOptions = {
   headerStyle: { backgroundColor: colors.ink },
   headerTintColor: '#fff',
@@ -59,18 +61,26 @@ function Tabs() {
 
 function Root() {
   const { ready } = useApp();
+  const auth = useAuth();
   const [minDone, setMinDone] = useState(false);
 
-  // keep the splash visible for at least 1.5 seconds
+  // keep the splash visible for at least 2.5 seconds
   useEffect(() => {
-  const t = setTimeout(() => setMinDone(true), 2500);
-  return () => clearTimeout(t);
-}, []);
+    const t = setTimeout(() => setMinDone(true), 2500);
+    return () => clearTimeout(t);
+  }, []);
 
-if (!ready || !minDone) {
-  return <SplashView />;
-}
+  // 1. splash while data and account load
+  if (!ready || !auth.ready || !minDone) {
+    return <SplashView />;
+  }
 
+  // 2. login or create-account screen
+  if (!auth.loggedIn) {
+    return <LoginScreen />;
+  }
+
+  // 3. the main app
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={headerOptions}>
@@ -93,10 +103,12 @@ if (!ready || !minDone) {
 export default function App() {
   return (
     <SafeAreaProvider>
-      <AppProvider>
-        <StatusBar style="light" />
-        <Root />
-      </AppProvider>
+      <AuthProvider>
+        <AppProvider>
+          <StatusBar style="light" />
+          <Root />
+        </AppProvider>
+      </AuthProvider>
     </SafeAreaProvider>
   );
 }
