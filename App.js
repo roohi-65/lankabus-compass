@@ -1,5 +1,5 @@
-import React from 'react';
-import { ActivityIndicator, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -7,6 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 
+import SplashView from './src/components/SplashView';
 import { AppProvider, useApp } from './src/context/AppContext';
 import HomeScreen from './src/screens/HomeScreen';
 import RoutesScreen from './src/screens/RoutesScreen';
@@ -20,7 +21,6 @@ import { colors } from './src/theme';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
-
 const headerOptions = {
   headerStyle: { backgroundColor: colors.ink },
   headerTintColor: '#fff',
@@ -59,13 +59,18 @@ function Tabs() {
 
 function Root() {
   const { ready } = useApp();
-  if (!ready) {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.ink }}>
-        <ActivityIndicator size="large" color={colors.plate} />
-      </View>
-    );
-  }
+  const [minDone, setMinDone] = useState(false);
+
+  // keep the splash visible for at least 1.5 seconds
+  useEffect(() => {
+  const t = setTimeout(() => setMinDone(true), 2500);
+  return () => clearTimeout(t);
+}, []);
+
+if (!ready || !minDone) {
+  return <SplashView />;
+}
+
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={headerOptions}>
