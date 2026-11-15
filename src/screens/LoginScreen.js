@@ -11,26 +11,52 @@ import {
   Platform,
   StyleSheet,
 } from 'react-native';
-import { useAuth } from '../context/AuthContext';
+import { Ionicons } from '@expo/vector-icons';
+import { useAuth, isEmail, isPhone } from '../context/AuthContext';
 import { colors, radius } from '../theme';
+
+function PasswordField({ value, onChangeText, placeholder, show, onToggle }) {
+  return (
+    <View style={s.passWrap}>
+      <TextInput
+        style={s.passInput}
+        value={value}
+        onChangeText={onChangeText}
+        placeholder={placeholder}
+        placeholderTextColor={colors.faint}
+        secureTextEntry={!show}
+        autoCapitalize="none"
+        autoCorrect={false}
+      />
+      <Pressable onPress={onToggle} hitSlop={10}>
+        <Ionicons name={show ? 'eye-off-outline' : 'eye-outline'} size={22} color={colors.muted} />
+      </Pressable>
+    </View>
+  );
+}
 
 export default function LoginScreen() {
   const { user, register, login, resetAccount } = useAuth();
   const creating = !user; // no saved account yet, so show the create-account form
-  const [name, setName] = useState(user ? user.name : '');
-  const [pin, setPin] = useState('');
-  const [pin2, setPin2] = useState('');
+  const [name, setName] = useState('');
+  const [contact, setContact] = useState(user ? user.contact : '');
+  const [password, setPassword] = useState('');
+  const [password2, setPassword2] = useState('');
+  const [show, setShow] = useState(false);
   const [error, setError] = useState('');
 
   const submit = async () => {
     setError('');
-    if (name.trim().length < 2) return setError('Enter your name (at least 2 letters).');
-    if (!/^\d{4,6}$/.test(pin)) return setError('PIN must be 4 to 6 digits.');
+    if (creating && name.trim().length < 2) return setError('Enter your name (at least 2 letters).');
+    if (!isEmail(contact) && !isPhone(contact)) {
+      return setError('Enter a valid email address or phone number.');
+    }
+    if (password.length < 6) return setError('Password must be at least 6 characters.');
     if (creating) {
-      if (pin !== pin2) return setError('The two PINs do not match.');
-      await register(name, pin);
+      if (password !== password2) return setError('The two passwords do not match.');
+      await register(name, contact, password);
     } else {
-      const err = await login(name, pin);
+      const err = await login(contact, password);
       if (err) setError(err);
     }
   };
@@ -43,8 +69,8 @@ export default function LoginScreen() {
         style: 'destructive',
         onPress: () => {
           resetAccount();
-          setPin('');
-          setPin2('');
+          setPassword('');
+          setPassword2('');
           setError('');
         },
       },
@@ -60,40 +86,50 @@ export default function LoginScreen() {
         </View>
 
         <View style={s.card}>
-          <Text style={s.label}>Your name</Text>
+          {creating && (
+            <View>
+              <Text style={s.label}>Your name</Text>
+              <TextInput
+                style={s.input}
+                value={name}
+                onChangeText={setName}
+                placeholder="e.g. Nimal Perera"
+                placeholderTextColor={colors.faint}
+                autoCapitalize="words"
+              />
+            </View>
+          )}
+
+          <Text style={s.label}>Email or phone number</Text>
           <TextInput
             style={s.input}
-            value={name}
-            onChangeText={setName}
-            placeholder="e.g. Nimal"
+            value={contact}
+            onChangeText={setContact}
+            placeholder="name@email.com or 0771234567"
             placeholderTextColor={colors.faint}
-            autoCapitalize="words"
+            keyboardType="email-address"
+            autoCapitalize="none"
+            autoCorrect={false}
           />
 
-          <Text style={s.label}>PIN (4 to 6 digits)</Text>
-          <TextInput
-            style={s.input}
-            value={pin}
-            onChangeText={setPin}
-            placeholder="••••"
-            placeholderTextColor={colors.faint}
-            keyboardType="number-pad"
-            secureTextEntry
-            maxLength={6}
+          <Text style={s.label}>Password</Text>
+          <PasswordField
+            value={password}
+            onChangeText={setPassword}
+            placeholder="At least 6 characters"
+            show={show}
+            onToggle={() => setShow(!show)}
           />
 
           {creating && (
             <View>
-              <Text style={s.label}>Confirm PIN</Text>
-              <TextInput
-                style={s.input}
-                value={pin2}
-                onChangeText={setPin2}
-                placeholder="••••"
-                placeholderTextColor={colors.faint}
-                keyboardType="number-pad"
-                secureTextEntry
-                maxLength={6}
+              <Text style={s.label}>Confirm password</Text>
+              <PasswordField
+                value={password2}
+                onChangeText={setPassword2}
+                placeholder="Type it again"
+                show={show}
+                onToggle={() => setShow(!show)}
               />
             </View>
           )}
@@ -106,7 +142,7 @@ export default function LoginScreen() {
 
           {!creating && (
             <Pressable onPress={confirmReset} hitSlop={8}>
-              <Text style={s.link}>Forgot PIN? Reset account</Text>
+              <Text style={s.link}>Forgot password? Reset account</Text>
             </Pressable>
           )}
         </View>
@@ -151,6 +187,17 @@ const s = StyleSheet.create({
     color: colors.text,
     backgroundColor: colors.bg,
   },
+  passWrap: {
+    height: 48,
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: colors.line,
+    borderRadius: radius.md,
+    paddingHorizontal: 14,
+    backgroundColor: colors.bg,
+  },
+  passInput: { flex: 1, fontSize: 16, color: colors.text, paddingVertical: 0 },
   error: { color: colors.maroon, fontWeight: '700', marginTop: 12 },
   button: {
     marginTop: 18,
