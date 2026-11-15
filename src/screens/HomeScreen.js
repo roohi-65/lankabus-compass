@@ -1,13 +1,14 @@
 import React, { useMemo, useState } from 'react';
-import { View, Text, ScrollView, Pressable, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, Pressable, Image, StyleSheet } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
-import { SearchBar, SectionTitle, EmptyState } from '../components/ui';
+import { SearchBar, SectionTitle } from '../components/ui';
 import RouteCard from '../components/RouteCard';
 import StopRow from '../components/StopRow';
 import { routes, stops, routesById, stopsById, districtCount } from '../data';
 import { searchAll } from '../utils/search';
 import { useApp } from '../context/AppContext';
+import { useAuth } from '../context/AuthContext';
 import { colors, radius } from '../theme';
 
 const POPULAR = [
@@ -23,6 +24,7 @@ const POPULAR = [
 export default function HomeScreen({ navigation }) {
   const insets = useSafeAreaInsets();
   const { recents, addRecent, clearRecents, favorites } = useApp();
+  const { user, logout } = useAuth();
   const [query, setQuery] = useState('');
   const results = useMemo(() => (query.trim() ? searchAll(query) : null), [query]);
 
@@ -50,9 +52,22 @@ export default function HomeScreen({ navigation }) {
   return (
     <ScrollView style={s.screen} keyboardShouldPersistTaps="handled" contentContainerStyle={{ paddingBottom: 32 }}>
       <View style={[s.hero, { paddingTop: insets.top + 16 }]}>
-        <Ionicons name="compass" size={150} color={colors.inkSoft} style={s.heroIcon} />
-        <Text style={s.title}>LankaBus Compass</Text>
-        <Text style={s.tagline}>Bus routes across all {districtCount} districts. Works offline.</Text>
+        <View style={s.userRow}>
+          <Text style={s.hello}>Hello, {user ? user.name : ''}</Text>
+          <Pressable onPress={logout} hitSlop={10} style={s.logout}>
+            <Ionicons name="log-out-outline" size={18} color="#fff" />
+            <Text style={s.logoutText}>Log out</Text>
+          </Pressable>
+        </View>
+
+        <View style={s.brand}>
+          <Image source={require('../../assets/icon.png')} style={s.logo} />
+          <View style={{ flex: 1 }}>
+            <Text style={s.title}>LankaBus Compass</Text>
+            <Text style={s.tagline}>Bus routes across all {districtCount} districts. Works offline.</Text>
+          </View>
+        </View>
+
         <View style={{ marginTop: 18 }}>
           <SearchBar onDark value={query} onChangeText={setQuery} placeholder="Search a route number, town or stop" />
         </View>
@@ -127,9 +142,14 @@ export default function HomeScreen({ navigation }) {
 const s = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.bg },
   hero: { backgroundColor: colors.ink, paddingHorizontal: 16, paddingBottom: 20, overflow: 'hidden' },
-  heroIcon: { position: 'absolute', right: -30, top: 10, opacity: 0.6 },
-  title: { color: '#fff', fontSize: 30, fontWeight: '900', letterSpacing: 0.3 },
-  tagline: { color: '#B8C7D6', fontSize: 15, marginTop: 4, maxWidth: 260 },
+  userRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 },
+  hello: { color: colors.plate, fontWeight: '800', fontSize: 15 },
+  logout: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  logoutText: { color: '#fff', fontWeight: '700', fontSize: 14 },
+  brand: { flexDirection: 'row', alignItems: 'center', gap: 14 },
+  logo: { width: 64, height: 64, borderRadius: 16, borderWidth: 2, borderColor: colors.plate },
+  title: { color: '#fff', fontSize: 26, fontWeight: '900' },
+  tagline: { color: '#B8C7D6', fontSize: 14, marginTop: 2 },
   tiles: { flexDirection: 'row', flexWrap: 'wrap', gap: 10, padding: 16, paddingBottom: 0 },
   tile: {
     width: '48%',
