@@ -37,3 +37,18 @@ Scan the QR code with Expo Go.
 
 ## Data note
 The dataset is hand-made for this assignment. Fares and timings are approximate and not for real travel planning.
+## Screenshots
+
+<p>
+  <img src="screenshots/01.png" width="180">
+  <img src="screenshots/02.png" width="180">
+  <img src="screenshots/03.png" width="180">
+  <img src="screenshots/04.png" width="180">
+  <img src="screenshots/05.png" width="180">
+</p>
+<p>
+  <img src="screenshots/06.png" width="180">
+  <img src="screenshots/07.png" width="180">
+  <img src="screenshots/08.png" width="180">
+  <img src="screenshots/09.png" width="180">
+</p>
